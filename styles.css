@@ -7,6 +7,12 @@
   --panel: #ffffff;
   --shadow: 0 22px 60px rgba(15, 12, 10, 0.16);
   --max: 1080px;
+  --font-heading-xl: clamp(2.4rem, 4vw, 3.8rem);
+  --font-heading-lg: clamp(1.8rem, 3vw, 2.5rem);
+  --font-heading-md: clamp(1.35rem, 2vw, 1.6rem);
+  --font-body: 1rem;
+  --line-body: 1.7;
+  --card-bg: #fffdf9;
 }
 
 * {
@@ -22,8 +28,9 @@ body {
   font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
   background: var(--bg);
   color: var(--ink);
-  line-height: 1.8;
+  line-height: var(--line-body);
   letter-spacing: 0.02em;
+  font-size: var(--font-body);
 }
 
 img {
@@ -171,7 +178,7 @@ a {
 
 .section-head h2 {
   font-family: "Shippori Mincho B1", serif;
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: var(--font-heading-lg);
   margin: 0;
 }
 
@@ -228,15 +235,13 @@ a {
   margin: 0;
 }
 
-.clean-list li,
-.column-list li {
+.clean-list li {
   padding-left: 18px;
   position: relative;
   margin-bottom: 12px;
 }
 
-.clean-list li::before,
-.column-list li::before {
+.clean-list li::before {
   content: "•";
   position: absolute;
   left: 0;
@@ -274,18 +279,33 @@ a {
 }
 
 .work-block h3 {
-  font-size: 1.05rem;
+  font-size: var(--font-heading-md);
   margin: 0 0 20px;
   color: var(--accent);
 }
 
-.column-list {
-  columns: 2;
-  column-gap: 40px;
+ .column-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0;
 }
 
 .column-list li {
-  break-inside: avoid;
+  margin: 0;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(31, 90, 93, 0.12);
+  font-size: var(--font-body);
+  line-height: 1.65;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.column-list li strong {
+  font-weight: 600;
 }
 
 .section-photo {
@@ -369,9 +389,6 @@ a {
     display: none;
   }
 
-  .column-list {
-    columns: 1;
-  }
 }
 
 @media (max-width: 600px) {
