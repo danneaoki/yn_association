@@ -1,90 +1,150 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YN Associates</title>
+  <title>YN Associates — アートと社会をつなぐ</title>
+  <meta name="description" content="YN Associates株式会社 — 展覧会キュレーション、パブリックアート、広報コンサルティング。アートの力で社会とつながる。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Shippori+Mincho+B1:wght@400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Shippori+Mincho+B1:wght@400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div class="grain" aria-hidden="true"></div>
 
-  <header class="site-header">
+  <!-- ======== HEADER ======== -->
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <div class="brand">YN Associates</div>
-      <nav class="site-nav" aria-label="主要ナビゲーション">
-        <a href="#about">会社概要</a>
-        <a href="#career">経歴</a>
-        <a href="#works">実績</a>
-        <a href="#contact">お問い合わせ</a>
+      <a href="#" class="brand" aria-label="YN Associates ホーム">
+        <span class="brand-yn">YN</span><span class="brand-sub">Associates</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="主要ナビゲーション">
+        <a href="#about" class="nav-link">会社概要</a>
+        <a href="#career" class="nav-link">経歴</a>
+        <a href="#works" class="nav-link">実績</a>
+        <a href="#stats" class="nav-link">数字で見る</a>
+        <a href="#contact" class="nav-link">お問い合わせ</a>
       </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </div>
   </header>
 
   <main>
+    <!-- ======== HERO ======== -->
     <section class="hero" aria-label="トップ">
-      <div class="hero-media" role="presentation"></div>
-      <div class="hero-content container">
-        <p class="hero-kicker">YN Associates</p>
-        <h1 class="hero-title">YN Associates</h1>
+      <div class="hero-geo" aria-hidden="true">
+        <div class="geo-grid"></div>
+        <div class="geo-rect geo-rect-1"></div>
+        <div class="geo-rect geo-rect-2"></div>
+        <div class="geo-rect geo-rect-3"></div>
+        <div class="geo-circle"></div>
+        <div class="geo-line geo-line-1"></div>
+        <div class="geo-line geo-line-2"></div>
       </div>
-      <div class="hero-edge" aria-hidden="true"></div>
+      <div class="hero-content container">
+        <p class="hero-kicker" data-animate="fade-up" data-delay="0">Since 2017 — Minami-Aoyama, Tokyo</p>
+        <h1 class="hero-title" data-animate="fade-up" data-delay="200">
+          <span class="hero-title-line">アートと社会を</span>
+          <span class="hero-title-line hero-title-accent">つなぐ。</span>
+        </h1>
+        <p class="hero-tagline" data-animate="fade-up" data-delay="400">展覧会キュレーション、パブリックアート、<br />広報コンサルティングを通じて。</p>
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="下にスクロール" data-animate="fade-up" data-delay="800">
+        <span class="scroll-line"></span>
+        <span class="scroll-text">Scroll</span>
+      </a>
     </section>
 
+    <!-- ======== ABOUT ======== -->
     <section id="about" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>会社概要</h2>
+        <div class="section-label" data-animate="fade-up">
+          <span class="label-number">01</span>
+          <span class="label-text">About</span>
         </div>
+        <h2 class="section-title" data-animate="fade-up" data-delay="100">会社概要</h2>
         <div class="overview-grid">
-          <div class="overview-card">
+          <div class="overview-card" data-animate="fade-up" data-delay="200">
             <dl>
-              <div>
+              <div class="dl-row">
                 <dt>会社名</dt>
                 <dd>YN Associates株式会社</dd>
               </div>
-              <div>
+              <div class="dl-row">
                 <dt>代表</dt>
                 <dd>西山裕子</dd>
               </div>
-              <div>
+              <div class="dl-row">
                 <dt>所在地</dt>
-                <dd>東京都港区南青山3-16-14 1F A+A Studio</dd>
+                <dd>東京都港区南青山3-16-14<br />1F A+A Studio</dd>
               </div>
-              <div>
+              <div class="dl-row">
                 <dt>設立</dt>
                 <dd>2017年5月18日</dd>
               </div>
             </dl>
           </div>
-          <div class="overview-card">
-            <h3>事業内容</h3>
-            <ul class="clean-list">
-              <li>展覧会のキュレーション、展示・制作コーディネーション、事務局運営</li>
-              <li>展覧会、芸術祭、パフォーミング・アーツ企画等の広報業務、広報コンサルティング業務</li>
-              <li>パブリックアート・コーポレートアートのコンサルティング業務</li>
-              <li>芸術プログラムなどの企画立案及び調査業務</li>
-              <li>アートグッズの開発、販売ルートの確保などコンサルティング業務</li>
+          <div class="overview-card" data-animate="fade-up" data-delay="350">
+            <h3 class="card-heading">事業内容</h3>
+            <ul class="service-list">
+              <li>
+                <span class="service-icon">◆</span>
+                展覧会のキュレーション、展示・制作コーディネーション、事務局運営
+              </li>
+              <li>
+                <span class="service-icon">◆</span>
+                展覧会、芸術祭、パフォーミング・アーツ企画等の広報業務、広報コンサルティング業務
+              </li>
+              <li>
+                <span class="service-icon">◆</span>
+                パブリックアート・コーポレートアートのコンサルティング業務
+              </li>
+              <li>
+                <span class="service-icon">◆</span>
+                芸術プログラムなどの企画立案及び調査業務
+              </li>
+              <li>
+                <span class="service-icon">◆</span>
+                アートグッズの開発、販売ルートの確保などコンサルティング業務
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="career" class="section section-ink">
+    <!-- ======== CAREER ======== -->
+    <section id="career" class="section section-alt">
       <div class="container">
-        <div class="section-head">
-          <h2>経歴</h2>
+        <div class="section-label" data-animate="fade-up">
+          <span class="label-number">02</span>
+          <span class="label-text">Career</span>
         </div>
+        <h2 class="section-title" data-animate="fade-up" data-delay="100">経歴</h2>
         <div class="timeline">
-          <div class="timeline-item">
+          <div class="timeline-item" data-animate="fade-left" data-delay="200">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2017年5月 〜 現在</div>
+            <div class="timeline-body">
+              <strong>YN Associates株式会社</strong> 設立・代表
+            </div>
+          </div>
+          <div class="timeline-item" data-animate="fade-left" data-delay="350">
+            <div class="timeline-dot"></div>
             <div class="timeline-year">2013年6月 〜 2016年1月</div>
             <div class="timeline-body">M&amp;I アート株式会社 在籍</div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item" data-animate="fade-left" data-delay="500">
+            <div class="timeline-dot"></div>
             <div class="timeline-year">1991年1月 〜 2013年5月</div>
             <div class="timeline-body">N&amp;A株式会社（旧ナンジョウアンドアソシエイツ） 在籍</div>
           </div>
@@ -92,143 +152,271 @@
       </div>
     </section>
 
+    <!-- ======== WORKS ======== -->
     <section id="works" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>実績</h2>
+        <div class="section-label" data-animate="fade-up">
+          <span class="label-number">03</span>
+          <span class="label-text">Works</span>
         </div>
+        <h2 class="section-title" data-animate="fade-up" data-delay="100">実績</h2>
 
-        <div class="work-block">
-          <h3>★主な展覧会関連業務（キュレーション、コーディネーション、事務局運営等）</h3>
-          <ul class="column-list">
-            <li>恵比寿映像祭2025　事務局統括（2024-2025）</li>
-            <li>東京都お台場トリエンナーレ2025　プロジェクトマネージャー（2023-2025）</li>
-            <li>モーリス・ヨーステン「トランジエンス−うつろうもの−」（void+、2023）</li>
-            <li>「Aomori Spring Sprout」（青森県立美術館、2022）</li>
-            <li>文化庁令和3年度 空港におけるメディア芸術日本文化発信事業（羽田空港、2022）</li>
-            <li>石田徹也個展（レイナソフィアアートセンター、スペイン、シカゴ巡回、2019）</li>
-            <li>吉田ユニ個展（東京、2018）</li>
-            <li>コルベール委員会「2074、夢の世界」（2016-17）</li>
-            <li>田名網敬一「BRIDGE」展（東京、2016）</li>
-            <li>五木田智央「GOKITA HOUSE」（東京、2015）</li>
-            <li>「COSMIC GIRLS」展（東京、2014）</li>
-            <li>「Japanese Artists living in NY」展（東京、2013）</li>
-            <li>チョ・ジョンファ「A Peace for Everyone」展（東京、2012）</li>
-            <li>「LADY DIOR AS SEEN BY」展（東京、2012）</li>
-            <li>「Arts meets New York」展（東京、2012）</li>
-            <li>「タムくんのゆれないこころ」展（東京、2011）</li>
-            <li>「草間彌生 水玉宇宙の星たち」展（東京、2010）</li>
-            <li>「ヴェルナー・パントン」展（東京、2009）</li>
-            <li>堂島リバービエンナーレ「リフレクション：アートに見る世界の今」展（大阪、2009）</li>
-            <li>「赤阪アートフラワー08」（東京、2008）</li>
-            <li>「YES」オノ・ヨーコ展（水戸、東京、広島、滋賀巡回2003-4）</li>
-            <li>「アジアンフィールド（アントニー・ゴームリー）」（東京、2004）</li>
-            <li>横浜トリエンナーレ（横浜、2001）</li>
-            <li>ドイツ・ハノーバー万博日本館 EXPO2000展示監修アシスタント（ドイツ、2000）</li>
-            <li>「バルーンアートフェスティバル-HOT AIR-うかぶ、ふくらむ、てでふれる」（グランシップ静岡県コンヴェンションセンター、1999）</li>
-            <li>台北ビエンナーレ（台北、1998）</li>
-            <li>「イタリア美術1945-1995 -みえるものとみえないもの-」展（愛知/東京/台北巡回1998）</li>
-            <li>「不易流行-現代中国美術と身の周りへの眼差し」展（東京・大阪1997）</li>
-            <li>「アウト・オブ・バウンズ-海景のなかの現代美術」展（香川、1994）</li>
-            <li>「人間の条件」展（東京、1994）</li>
-            <li>オノ・ヨーコ「絶滅する種族2319-2322」（東京、1993）</li>
-          </ul>
-        </div>
+        <div class="tabs" data-animate="fade-up" data-delay="200">
+          <div class="tab-nav" role="tablist">
+            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1"
+              data-tab="1">
+              展覧会関連<span class="tab-count">31</span>
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2"
+              data-tab="2">
+              パブリックアート<span class="tab-count">21</span>
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3"
+              data-tab="3">
+              アート広報<span class="tab-count">13</span>
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-panel-4" id="tab-4"
+              data-tab="4">
+              パフォーミング<span class="tab-count">10</span>
+            </button>
+          </div>
 
-        <div class="work-block">
-          <h3>★主なパブリックアート・コーポレートアートプロジェクト</h3>
-          <ul class="column-list">
-            <li>東京倶楽部アートプロジェクト（六本木、2022、2023）</li>
-            <li>プリンス・チャールズ・クレセントアート計画（シンガポール、2017）</li>
-            <li>テンブスアートプロジェクト（シンガポール、2016）</li>
-            <li>アードモアアートプロジェクト（シンガポール、2015）</li>
-            <li>ザ・ガーデンオリエンタル大阪（旧大阪市公館）アートプロジェクト（大阪、2014）</li>
-            <li>虎ノ門ヒルズ Art &amp; Design計画（神谷徹作品）（東京、2013）</li>
-            <li>あべのnini パブリックアート（大阪、2012）</li>
-            <li>パークハイアット上海 アート計画（上海、2008）</li>
-            <li>Belle Vue アートプロジェクト（シンガポール、2008）</li>
-            <li>東京倶楽部ビルディング アート計画（東京、2007）</li>
-            <li>九州歯科大学　アートプロジェクト（福岡、2006）</li>
-            <li>アートヴィレッジ大崎 アートプロジェクト（東京、2006）</li>
-            <li>VIVO CITY アートプロジェクト（シンガポール、2006）</li>
-            <li>日本国際博覧会　愛・地球博覧会アートプログラム制作協力（愛知、2005フコールアートセンターとの協同）</li>
-            <li>東京倶楽部会館 アート計画（東京、2005）</li>
-            <li>六本木T-CUBE アートワーク計画(2003)</li>
-            <li>三井不動産（株）中之島三井ビルディングアートワークプロジェクト（大阪、2002）</li>
-            <li>芝公園プロジェクトラ・トゥール公園 パブリックアート計画（東京、2000）</li>
-            <li>博多リバレインアートプロジェクト（福岡、1999）</li>
-            <li>ゆめおおかアートプロジェクト（横浜、1997）</li>
-            <li>新宿アイランド・アート計画（東京、1995）</li>
-          </ul>
-        </div>
+          <!-- Tab Panel 1 -->
+          <div class="tab-panel active" role="tabpanel" id="tab-panel-1" aria-labelledby="tab-1">
+            <h3 class="panel-heading">主な展覧会関連業務<span>キュレーション、コーディネーション、事務局運営等</span></h3>
+            <ul class="work-list">
+              <li><span class="work-year">2024-25</span>恵比寿映像祭2025　事務局統括</li>
+              <li><span class="work-year">2023-25</span>東京都お台場トリエンナーレ2025　プロジェクトマネージャー</li>
+              <li><span class="work-year">2023</span>モーリス・ヨーステン「トランジエンス−うつろうもの−」（void+）</li>
+              <li><span class="work-year">2022</span>「Aomori Spring Sprout」（青森県立美術館）</li>
+              <li><span class="work-year">2022</span>文化庁令和3年度 空港におけるメディア芸術日本文化発信事業（羽田空港）</li>
+              <li><span class="work-year">2019</span>石田徹也個展（レイナソフィアアートセンター、スペイン、シカゴ巡回）</li>
+              <li><span class="work-year">2018</span>吉田ユニ個展（東京）</li>
+              <li><span class="work-year">2016-17</span>コルベール委員会「2074、夢の世界」</li>
+              <li><span class="work-year">2016</span>田名網敬一「BRIDGE」展（東京）</li>
+              <li><span class="work-year">2015</span>五木田智央「GOKITA HOUSE」（東京）</li>
+              <li><span class="work-year">2014</span>「COSMIC GIRLS」展（東京）</li>
+              <li><span class="work-year">2013</span>「Japanese Artists living in NY」展（東京）</li>
+              <li><span class="work-year">2012</span>チョ・ジョンファ「A Peace for Everyone」展（東京）</li>
+              <li><span class="work-year">2012</span>「LADY DIOR AS SEEN BY」展（東京）</li>
+              <li><span class="work-year">2012</span>「Arts meets New York」展（東京）</li>
+              <li><span class="work-year">2011</span>「タムくんのゆれないこころ」展（東京）</li>
+              <li><span class="work-year">2010</span>「草間彌生 水玉宇宙の星たち」展（東京）</li>
+              <li><span class="work-year">2009</span>「ヴェルナー・パントン」展（東京）</li>
+              <li><span class="work-year">2009</span>堂島リバービエンナーレ「リフレクション：アートに見る世界の今」展（大阪）</li>
+              <li><span class="work-year">2008</span>「赤阪アートフラワー08」（東京）</li>
+              <li><span class="work-year">2003-04</span>「YES」オノ・ヨーコ展（水戸、東京、広島、滋賀巡回）</li>
+              <li><span class="work-year">2004</span>「アジアンフィールド（アントニー・ゴームリー）」（東京）</li>
+              <li><span class="work-year">2001</span>横浜トリエンナーレ（横浜）</li>
+              <li><span class="work-year">2000</span>ドイツ・ハノーバー万博日本館 EXPO2000展示監修アシスタント</li>
+              <li><span class="work-year">1999</span>「バルーンアートフェスティバル-HOT AIR-」（グランシップ静岡県）</li>
+              <li><span class="work-year">1998</span>台北ビエンナーレ（台北）</li>
+              <li><span class="work-year">1998</span>「イタリア美術1945-1995」展（愛知/東京/台北巡回）</li>
+              <li><span class="work-year">1997</span>「不易流行-現代中国美術と身の周りへの眼差し」展（東京・大阪）</li>
+              <li><span class="work-year">1994</span>「アウト・オブ・バウンズ-海景のなかの現代美術」展（香川）</li>
+              <li><span class="work-year">1994</span>「人間の条件」展（東京）</li>
+              <li><span class="work-year">1993</span>オノ・ヨーコ「絶滅する種族2319-2322」（東京）</li>
+            </ul>
+          </div>
 
-        <div class="work-block">
-          <h3>★主なアートプロジェクトの広報業務</h3>
-          <ul class="column-list">
-            <li>「篠原強　宇宙遊 ー＜原初大火球＞から始まる」展　広報協力（2023）</li>
-            <li>アニエスベーギャラリーブティック　年間広報（2023 -）</li>
-            <li>Reborn Art Festival 2019、2021　海外広報</li>
-            <li>日本ポーランド修好100年企画（2019）</li>
-            <li>ブリティッシュ・カウンシル「Playable city」（2018）</li>
-            <li>シャネル・ネクサス・ホール「太陽の宮殿」カール・ラガーフェルド写真展（東京、2016）</li>
-            <li>さいたまトリエンナーレ2016</li>
-            <li>シャネル・ネクサス・ホール「TRANSMISSIONS」（東京、2016）</li>
-            <li>シャネル・ネクサス・ホール「Retrace our Steps −ある日人々が消えた街」（東京、2016）</li>
-            <li>三菱一号館美術館　海外広報（東京、2012-2013）</li>
-            <li>ヨコハマトリエンナーレ2011（神奈川、2011）</li>
-            <li>あいちトリエンナーレ2010（愛知、2010）</li>
-          </ul>
-        </div>
+          <!-- Tab Panel 2 -->
+          <div class="tab-panel" role="tabpanel" id="tab-panel-2" aria-labelledby="tab-2" hidden>
+            <h3 class="panel-heading">主なパブリックアート・コーポレートアートプロジェクト</h3>
+            <ul class="work-list">
+              <li><span class="work-year">2022-23</span>東京倶楽部アートプロジェクト（六本木）</li>
+              <li><span class="work-year">2017</span>プリンス・チャールズ・クレセントアート計画（シンガポール）</li>
+              <li><span class="work-year">2016</span>テンブスアートプロジェクト（シンガポール）</li>
+              <li><span class="work-year">2015</span>アードモアアートプロジェクト（シンガポール）</li>
+              <li><span class="work-year">2014</span>ザ・ガーデンオリエンタル大阪 アートプロジェクト（大阪）</li>
+              <li><span class="work-year">2013</span>虎ノ門ヒルズ Art &amp; Design計画（神谷徹作品）（東京）</li>
+              <li><span class="work-year">2012</span>あべのnini パブリックアート（大阪）</li>
+              <li><span class="work-year">2008</span>パークハイアット上海 アート計画（上海）</li>
+              <li><span class="work-year">2008</span>Belle Vue アートプロジェクト（シンガポール）</li>
+              <li><span class="work-year">2007</span>東京倶楽部ビルディング アート計画（東京）</li>
+              <li><span class="work-year">2006</span>九州歯科大学 アートプロジェクト（福岡）</li>
+              <li><span class="work-year">2006</span>アートヴィレッジ大崎 アートプロジェクト（東京）</li>
+              <li><span class="work-year">2006</span>VIVO CITY アートプロジェクト（シンガポール）</li>
+              <li><span class="work-year">2005</span>日本国際博覧会 愛・地球博覧会アートプログラム（愛知）</li>
+              <li><span class="work-year">2005</span>東京倶楽部会館 アート計画（東京）</li>
+              <li><span class="work-year">2003</span>六本木T-CUBE アートワーク計画</li>
+              <li><span class="work-year">2002</span>三井不動産 中之島三井ビルディング（大阪）</li>
+              <li><span class="work-year">2000</span>芝公園プロジェクト パブリックアート計画（東京）</li>
+              <li><span class="work-year">1999</span>博多リバレインアートプロジェクト（福岡）</li>
+              <li><span class="work-year">1997</span>ゆめおおかアートプロジェクト（横浜）</li>
+              <li><span class="work-year">1995</span>新宿アイランド・アート計画（東京）</li>
+            </ul>
+          </div>
 
-        <div class="work-block">
-          <h3>★主なパフォーミング・アーツ企画の広報業務</h3>
-          <ul class="column-list">
-            <li>輪Inster公演　広報協力（2022）</li>
-            <li>Tokyo Real Underground（東京都オリンピア企画）（2020-2021）</li>
-            <li>彩の国さいたま芸術劇場「バンガラダンスシアター」（埼玉、2018）</li>
-            <li>TPAM 国際舞台芸術ミーティングin 横浜 2017</li>
-            <li>TPAM 国際舞台芸術ミーティングin 横浜 2016</li>
-            <li>川村美紀子「まぼろしの夜明け」（東京、2015）</li>
-            <li>黒沢美香「この島でうまれた人」（東京、2015）</li>
-            <li>シェルカウィ「バベル (words)」（東京、2014）</li>
-            <li>パルコ主催「フランコ・フェスティバル」（東京、2013〜2014）</li>
-            <li>ダンストリエンナーレトーキョー2012（東京、2012）</li>
-          </ul>
+          <!-- Tab Panel 3 -->
+          <div class="tab-panel" role="tabpanel" id="tab-panel-3" aria-labelledby="tab-3" hidden>
+            <h3 class="panel-heading">主なアートプロジェクトの広報業務</h3>
+            <ul class="work-list">
+              <li><span class="work-year">2023</span>「篠原強 宇宙遊」展 広報協力</li>
+              <li><span class="work-year">2023-</span>アニエスベーギャラリーブティック 年間広報</li>
+              <li><span class="work-year">2019-21</span>Reborn Art Festival 海外広報</li>
+              <li><span class="work-year">2019</span>日本ポーランド修好100年企画</li>
+              <li><span class="work-year">2018</span>ブリティッシュ・カウンシル「Playable city」</li>
+              <li><span class="work-year">2016</span>シャネル・ネクサス・ホール「太陽の宮殿」カール・ラガーフェルド写真展（東京）</li>
+              <li><span class="work-year">2016</span>さいたまトリエンナーレ2016</li>
+              <li><span class="work-year">2016</span>シャネル・ネクサス・ホール「TRANSMISSIONS」（東京）</li>
+              <li><span class="work-year">2016</span>シャネル・ネクサス・ホール「Retrace our Steps」（東京）</li>
+              <li><span class="work-year">2012-13</span>三菱一号館美術館 海外広報（東京）</li>
+              <li><span class="work-year">2011</span>ヨコハマトリエンナーレ2011（神奈川）</li>
+              <li><span class="work-year">2010</span>あいちトリエンナーレ2010（愛知）</li>
+            </ul>
+          </div>
+
+          <!-- Tab Panel 4 -->
+          <div class="tab-panel" role="tabpanel" id="tab-panel-4" aria-labelledby="tab-4" hidden>
+            <h3 class="panel-heading">主なパフォーミング・アーツ企画の広報業務</h3>
+            <ul class="work-list">
+              <li><span class="work-year">2022</span>輪Inster公演 広報協力</li>
+              <li><span class="work-year">2020-21</span>Tokyo Real Underground（東京都オリンピア企画）</li>
+              <li><span class="work-year">2018</span>彩の国さいたま芸術劇場「バンガラダンスシアター」（埼玉）</li>
+              <li><span class="work-year">2017</span>TPAM 国際舞台芸術ミーティング in 横浜 2017</li>
+              <li><span class="work-year">2016</span>TPAM 国際舞台芸術ミーティング in 横浜 2016</li>
+              <li><span class="work-year">2015</span>川村美紀子「まぼろしの夜明け」（東京）</li>
+              <li><span class="work-year">2015</span>黒沢美香「この島でうまれた人」（東京）</li>
+              <li><span class="work-year">2014</span>シェルカウィ「バベル (words)」（東京）</li>
+              <li><span class="work-year">2013-14</span>パルコ主催「フランコ・フェスティバル」（東京）</li>
+              <li><span class="work-year">2012</span>ダンストリエンナーレトーキョー2012（東京）</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-photo" aria-label="写真">
-      <div class="container photo-grid">
-        <figure>
-          <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1400&q=80" alt="アート空間のイメージ写真" />
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80" alt="都市と光のイメージ写真" />
-        </figure>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
+    <!-- ======== STATS ======== -->
+    <section id="stats" class="section section-alt">
       <div class="container">
-        <div class="section-head">
-          <h2>お問い合わせ先</h2>
+        <div class="section-label" data-animate="fade-up">
+          <span class="label-number">04</span>
+          <span class="label-text">Numbers</span>
         </div>
-        <div class="contact-card">
-          <p class="contact-email">nishiyama@yna.tokyo</p>
-          <a class="contact-button" href="#">お問合せフォーム</a>
+        <h2 class="section-title" data-animate="fade-up" data-delay="100">数字で見るYN Associates</h2>
+        <div class="stats-grid">
+          <div class="stat-card" data-animate="fade-up" data-delay="200">
+            <span class="stat-number" data-count="30">30</span>
+            <span class="stat-plus">+</span>
+            <span class="stat-label">年以上の実績</span>
+            <span class="stat-desc">1991年から現代アートの世界で活動</span>
+          </div>
+          <div class="stat-card" data-animate="fade-up" data-delay="350">
+            <span class="stat-number" data-count="75">75</span>
+            <span class="stat-plus">+</span>
+            <span class="stat-label">プロジェクト</span>
+            <span class="stat-desc">展覧会・パブリックアート・広報</span>
+          </div>
+          <div class="stat-card" data-animate="fade-up" data-delay="500">
+            <span class="stat-number" data-count="8">8</span>
+            <span class="stat-plus"></span>
+            <span class="stat-label">カ国での活動</span>
+            <span class="stat-desc">日本・シンガポール・スペイン・中国 他</span>
+          </div>
+          <div class="stat-card" data-animate="fade-up" data-delay="650">
+            <span class="stat-number" data-count="5">5</span>
+            <span class="stat-plus"></span>
+            <span class="stat-label">事業領域</span>
+            <span class="stat-desc">キュレーション・広報・コンサルティング 他</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== CONTACT ======== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-label" data-animate="fade-up">
+          <span class="label-number">05</span>
+          <span class="label-text">Contact</span>
+        </div>
+        <h2 class="section-title" data-animate="fade-up" data-delay="100">お問い合わせ</h2>
+        <div class="contact-card" data-animate="fade-up" data-delay="250">
+          <div class="contact-inner">
+            <p class="contact-lead">プロジェクトのご相談、取材のお問い合わせなど<br />お気軽にご連絡ください。</p>
+            <a class="contact-email" href="mailto:nishiyama@yna.tokyo">nishiyama@yna.tokyo</a>
+            <div class="contact-divider"></div>
+            <p class="contact-address">〒107-0062 東京都港区南青山3-16-14 1F A+A Studio</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- ======== FOOTER ======== -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <span>YN Associates株式会社</span>
-        <span>東京都港区南青山3-16-14 1F A+A Studio</span>
-      </div>
+    <div class="container footer-inner">
+      <span class="footer-brand">YN Associates株式会社</span>
+      <span class="footer-copy">&copy; 2017–2026 YN Associates Inc.</span>
     </div>
   </footer>
+
+  <script>
+    /* ── Hamburger Menu ── */
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('site-nav');
+    const header = document.getElementById('site-header');
+    const navLinks = nav.querySelectorAll('.nav-link');
+
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('is-open');
+      nav.classList.toggle('is-open');
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.classList.toggle('nav-open', open);
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('is-open');
+        nav.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
+      });
+    });
+
+    /* ── Header scroll state ── */
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          header.classList.toggle('scrolled', window.scrollY > 60);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    /* ── Tabs ── */
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+        tabPanels.forEach(p => { p.classList.remove('active'); p.hidden = true; });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        const panel = document.getElementById(`tab-panel-${btn.dataset.tab}`);
+        panel.classList.add('active');
+        panel.hidden = false;
+      });
+    });
+
+    /* ── Scroll Animations (Intersection Observer) ── */
+    const animEls = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const delay = parseInt(el.dataset.delay || 0, 10);
+          setTimeout(() => el.classList.add('is-visible'), delay);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    animEls.forEach(el => observer.observe(el));
+  </script>
 </body>
+
 </html>
